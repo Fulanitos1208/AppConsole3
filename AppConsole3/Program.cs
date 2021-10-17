@@ -4,14 +4,35 @@ namespace AppConsole3
 {
     class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            Punto3D a;
-            a = new Punto3D(524,.255,564.25);
+            Punto2D a;
+            a = new Punto2D(0, 1);
             Console.WriteLine(a.ToString());
+
+            Punto2D b;
+            b = new Punto2D(0, 2);
+            Console.WriteLine(b.ToString());
+
+            double d = a.Distancia(b);
+            Console.WriteLine(d);
+
+            Punto3D c;
+            c = new Punto3D(1,2,1);
+            Console.WriteLine(c.ToString());
+            
+            Punto3D e;
+            e = new Punto3D(1, 2,1 );
+            Console.WriteLine(e.ToString());
+            
+            Punto3D f;
+            f = new Punto3D(1, 2, 1);
+            Console.WriteLine(f.ToString());
+
+            double di = c.Distancia(f);
+            Console.WriteLine(di);
             Console.ReadKey();
+
         }
     }
 }
-//Math.Sqrt(( x2-x)^2+(y2-y)^2) es la formula para calcular la distancia pero como
-//no termine la clase no la agregue por que me aparecian mucjhos errores de compilación
